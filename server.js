@@ -6,6 +6,7 @@
 var express = require("express"),
     bodyParser = require("body-parser"),
     http = require("http"),
+    app = express();
 
 /*
  * body-parser is a piece of express middleware that reads
@@ -25,9 +26,17 @@ app.use(express.static(__dirname + "/client"));
 http.createServer(app).listen(3000);
 
 // set up routes
-app.get("/", function(req, res) {
-    res.send("This is the root route");
+
+
+app.get("/test", function(req, res) {
+    res.send("This is the test route");
 });
+
+
+
+
+
+
 
 // this will redirect to the route if user put wrong route
 app.get("*", function(req, res) {
