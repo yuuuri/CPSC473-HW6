@@ -10,7 +10,9 @@ var express = require("express"),
     outcome,
     wins = 0,
     ties = 0,
-    losses = 0;
+    losses = 0,
+    playerChoice,
+    serverChoice;
 
 
 // reuse from hw5
@@ -85,7 +87,7 @@ function result(playerChoice) {
             losses++;
         }    
     }else{
-         res.write("{\"error\" : \"happened in result function\"}");
+         //res.write("{\"error\" : \"happened in result function\"}");
          console.log("error happend in result function...");
     }
 
@@ -125,18 +127,20 @@ app.post('/play/rock',function(req, res) {
 
     result('rock');
 
-
     // create javascript object, object will be sent back to 
     // client side
-    var obj = { outcome: '', wins: 0, losses: 0, ties: 0};    
-        obj.outcome = outcome,
-        obj.wins = wins,
-        obj.losses = losses,
+    var obj = { playerChoice: '', serverChoice: '', outcome: '', wins: 0, losses: 0, ties: 0};
+        obj.playerChoice = playerChoice;
+        obj.serverChoice = serverChoice;
+        obj.outcome = outcome;
+        obj.wins = wins;
+        obj.losses = losses;
         obj.ties = ties;
 
-        //sending result back to client
+        // sending result back to client
         console.log(obj);
-        
+        // responding to client
+        res.json(obj); 
         
 });
 
