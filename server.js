@@ -27,7 +27,10 @@ function randomChoice() {
 // called by app.post, generates serverChoice returns outcome and update
 // results
 function result(move) {
-    var serverChoice = randomChoice();
+    
+    serverChoice = randomChoice();
+    playerChoice = move;
+
     console.log("******   SERVER SIDE   *******");
     console.log("PLAYER CHOICE: " + playerChoice);
     console.log("SERVER CHOICE: " + serverChoice);
