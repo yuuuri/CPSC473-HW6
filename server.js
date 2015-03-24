@@ -144,9 +144,93 @@ app.post('/play/rock',function(req, res) {
         
 });
 
+app.post('/play/paper',function(req, res) {
+    //var rock = req.body.move;
 
+    result('paper');
 
+    // create javascript object, object will be sent back to 
+    // client side
+    var obj = { playerChoice: '', serverChoice: '', outcome: '', wins: 0, losses: 0, ties: 0};
+        obj.playerChoice = playerChoice;
+        obj.serverChoice = serverChoice;
+        obj.outcome = outcome;
+        obj.wins = wins;
+        obj.losses = losses;
+        obj.ties = ties;
 
+        // sending result back to client
+        console.log(obj);
+        // responding to client
+        res.json(obj); 
+        
+});
+
+app.post('/play/scissors',function(req, res) {
+    //var rock = req.body.move;
+
+    result('scissors');
+
+    // create javascript object, object will be sent back to 
+    // client side
+    var obj = { playerChoice: '', serverChoice: '', outcome: '', wins: 0, losses: 0, ties: 0};
+        obj.playerChoice = playerChoice;
+        obj.serverChoice = serverChoice;
+        obj.outcome = outcome;
+        obj.wins = wins;
+        obj.losses = losses;
+        obj.ties = ties;
+
+        // sending result back to client
+        console.log(obj);
+        // responding to client
+        res.json(obj); 
+        
+});
+
+app.post('/play/lizard',function(req, res) {
+    //var rock = req.body.move;
+
+    result('lizard');
+
+    // create javascript object, object will be sent back to 
+    // client side
+    var obj = { playerChoice: '', serverChoice: '', outcome: '', wins: 0, losses: 0, ties: 0};
+        obj.playerChoice = playerChoice;
+        obj.serverChoice = serverChoice;
+        obj.outcome = outcome;
+        obj.wins = wins;
+        obj.losses = losses;
+        obj.ties = ties;
+
+        // sending result back to client
+        console.log(obj);
+        // responding to client
+        res.json(obj); 
+        
+});
+
+app.post('/play/spock',function(req, res) {
+    //var rock = req.body.move;
+
+    result('spock');
+
+    // create javascript object, object will be sent back to 
+    // client side
+    var obj = { playerChoice: '', serverChoice: '', outcome: '', wins: 0, losses: 0, ties: 0};
+        obj.playerChoice = playerChoice;
+        obj.serverChoice = serverChoice;
+        obj.outcome = outcome;
+        obj.wins = wins;
+        obj.losses = losses;
+        obj.ties = ties;
+
+        // sending result back to client
+        console.log(obj);
+        // responding to client
+        res.json(obj); 
+        
+});
 
 
 // this will redirect to the route if user put wrong route
