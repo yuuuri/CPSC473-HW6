@@ -44,10 +44,10 @@ function result(playerChoice) {
         }
     }else if (playerChoice === "paper") {
          if ((serverChoice === "rock") || (serverChoice === "spock")) {
-            outcoe ='win';
+            outcome ='win';
             wins++;
         } else if (serverChoice === "paper") {
-            outcoe ='tie';
+            outcome ='tie';
             ties++;
         } else {
             outcome ='lose';
