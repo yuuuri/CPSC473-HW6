@@ -26,7 +26,7 @@ function randomChoice() {
 // reuse from hw5
 // called by app.post, generates serverChoice returns outcome and update
 // results
-function result(playerChoice) {
+function result(move) {
     var serverChoice = randomChoice();
     console.log("******   SERVER SIDE   *******");
     console.log("PLAYER CHOICE: " + playerChoice);
@@ -137,10 +137,11 @@ app.post('/play/rock',function(req, res) {
         obj.losses = losses;
         obj.ties = ties;
 
-        // sending result back to client
-        console.log(obj);
         // responding to client
         res.json(obj); 
+        // sending result back to client
+        console.log(obj);
+
         
 });
 
@@ -159,10 +160,10 @@ app.post('/play/paper',function(req, res) {
         obj.losses = losses;
         obj.ties = ties;
 
-        // sending result back to client
-        console.log(obj);
         // responding to client
         res.json(obj); 
+        // sending result back to client
+        console.log(obj);
         
 });
 
@@ -181,10 +182,10 @@ app.post('/play/scissors',function(req, res) {
         obj.losses = losses;
         obj.ties = ties;
 
-        // sending result back to client
-        console.log(obj);
         // responding to client
         res.json(obj); 
+        // sending result back to client
+        console.log(obj);
         
 });
 
@@ -203,10 +204,10 @@ app.post('/play/lizard',function(req, res) {
         obj.losses = losses;
         obj.ties = ties;
 
-        // sending result back to client
-        console.log(obj);
         // responding to client
         res.json(obj); 
+        // sending result back to client
+        console.log(obj);
         
 });
 
