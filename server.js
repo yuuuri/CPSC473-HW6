@@ -26,12 +26,30 @@ app.use(express.static(__dirname + "/client"));
 http.createServer(app).listen(3000);
 
 // set up routes
-
-
 app.get("/test", function(req, res) {
     res.send("This is the test route");
 });
 
+/*
+ * server receive json object created by clicking the button
+ * by user with post
+ */
+app.post('/play/rock',function(req, res) {
+    //var rock = req.body.move;
+
+    // create javascript object, object will be sent back to 
+    // client side
+    var obj = { outcome: 0, wins: 0, losses: 0, ties: 0};    
+        obj.outcome = outcome,
+        obj.wins = wins,
+        obj.losses = losses,
+        obj.ties = ties;
+
+        //sending result back to client
+        console.log(obj);
+        
+        
+    )};
 
 
 
