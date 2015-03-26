@@ -1,5 +1,11 @@
-var main = function() {
+/*
+ * CPSC473 Assignment 6
+ * Mario Andrade & Yuri Van Steenburg
+ * Consulted by : Henry Le
+ *
+ */
 
+var main = function() {
 
 	$('#rock').click(function(){
 		//alert("test: rock button works");
@@ -112,12 +118,6 @@ var main = function() {
 
 		});
 	});
-
-
-
-
-
-
 
 
 };
